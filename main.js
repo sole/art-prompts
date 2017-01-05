@@ -28,7 +28,7 @@ window.onload = function() {
 	// ~~~
 
 	function parseValues(text) {
-		var lines = text.split('\n');
+		var lines = text.trim().split('\n');
 		lines = lines.map((v) => {
 			v = v.replace('- ', '');
 			v = v.trim();
