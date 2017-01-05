@@ -1,0 +1,44 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	height: 100%;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	padding: 1rem;
+}
+
+main {
+	padding: 1rem 0;
+}
+
+aside {
+	display: flex;
+	flex-direction: row;
+	flex: 2;
+}
+
+aside > * {
+	flex: 1;
+}
+
+aside section {
+	display: flex;
+	flex-direction: column;
+}
+
+aside section h2 {
+	flex: 0;
+}
+aside section textarea {
+	flex: 1;
+}
+
+dt {
+	font-weight: bold;
+}
