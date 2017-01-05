@@ -1,7 +1,7 @@
 window.onload = function() {
 	
 	var promptText = document.getElementById('prompt');
-	var randomisableSections = Array.from(document.querySelectorAll('.randomisable'));
+	var randomisableSections = Array.from(document.querySelectorAll('aside section'));
 	var randomisables = [];
 
 	randomisableSections.forEach((section) => {
@@ -10,6 +10,9 @@ window.onload = function() {
 		var picker = section.querySelector('input[type=number]');
 		var textarea = section.querySelector('textarea');
 		var values = parseValues(textarea.value);
+		
+		// sanitise values back into the area
+		textarea.value = values.join('\n');
 
 		randomisables.push({
 			title, values, picker
